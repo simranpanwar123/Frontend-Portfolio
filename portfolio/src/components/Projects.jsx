@@ -35,8 +35,8 @@ const Projects = () => {
       description:
         "A modern responsive portfolio website built using React and Tailwind CSS with animations and smooth scrolling sections.",
       tech: ['React', 'Tailwind', 'AOS'],
-      github: "#",
-      live: "#"
+      github: "https://github.com/simranpanwar123/My-Portfolio",
+      live: "https://my-portfolio-njjp.vercel.app/"
     },
 
     {
