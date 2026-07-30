@@ -1,7 +1,7 @@
 import React from 'react'
 import proj1 from '../assets/proj1.png'
 import proj2 from '../assets/proj2.png'
-import proj3 from '../assets/proj3.png'
+import project3 from '../assets/project3.png'
 import proj4 from '../assets/proj4.png'
 
 const Projects = () => {
@@ -30,7 +30,7 @@ const Projects = () => {
     },
     {
       id: 3,
-      image: proj3,
+      image: project3,
       title: "Portfolio Website",
       description:
         "A modern responsive portfolio website built using React and Tailwind CSS with animations and smooth scrolling sections.",
