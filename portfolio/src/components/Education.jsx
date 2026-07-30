@@ -14,14 +14,14 @@ const Education = () => {
         },
         {
             id: 2,
-            degree: 'Higher Secondary ',
+            degree: "Higher Secondary Education (12th)",
             institution: 'G. M. I. C. Sidhsaur Rudraprayag',
             year: '2024',
             
         },
         {
             id: 3,
-            degree: 'Web Development Course',
+            degree: "Diploma in Web Development",
             institution: 'LBSTI Delhi',
             year: '2024-2026',
             

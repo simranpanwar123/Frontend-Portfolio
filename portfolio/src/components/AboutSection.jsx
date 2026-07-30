@@ -29,12 +29,11 @@ const AboutSection = () => {
 
             I'm a passionate{' '}
             <span className='text-cyan-400 font-bold'>
-              Full Stack Developer
+              Frontend Developer
             </span>{' '}
             dedicated to building modern, responsive, and user-friendly
             web applications. I enjoy turning creative ideas into real-world
-            digital experiences using technologies like React, Django,
-            JavaScript, and Tailwind CSS.
+            digital experiences using technologies like React, JavaScript, HTML, CSS and Tailwind CSS.
 
             <br /><br />
 

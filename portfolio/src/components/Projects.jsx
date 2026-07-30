@@ -2,13 +2,25 @@ import React from 'react'
 import proj1 from '../assets/proj1.png'
 import proj2 from '../assets/proj2.png'
 import proj3 from '../assets/proj3.png'
+import proj4 from '../assets/proj4.png'
 
 const Projects = () => {
 
   const projects = [
     {
-      id: 1,
+      id:1,
       image: proj1,
+      title: "MERN E-Commerce Website",
+      description:
+        "A responsive e-commerce application with product listing, cart functionality and user-friendly shopping experience.",
+      tech: ["React", "JavaScript", "Tailwind CSS", "API","Node.js","Express","MongoDB"],
+      github: "https://github.com/simranpanwar123/E-commerce",
+      live: "https://ecommerce-eight-xi-55.vercel.app/",
+    },
+
+    {
+      id: 2,
+      image: proj2,
       title: "Weather App",
       description:
         "A weather app that provides real-time weather information for any location. It features a clean UI and displays current weather conditions, forecasts, humidity, and wind speed.",
@@ -16,18 +28,6 @@ const Projects = () => {
       github: "https://github.com/simranpanwar123/Weather-App",
       live: "https://weather-app-nine-sooty-55.vercel.app/"
     },
-
-    {
-      id: 2,
-      image: proj2,
-      title: "JWT Authentication App",
-      description:
-        "A full-stack web application with secure JWT authentication. Users can register, login, and access protected routes using JWT tokens.",
-      tech: ['React', 'Django', 'JWT', 'APIs'],
-      github: "https://github.com/simranpanwar123/Fullstack-jwt-authentication",
-      live: "https://fullstack-jwt-authentication.vercel.app/"
-    },
-
     {
       id: 3,
       image: proj3,
@@ -41,13 +41,13 @@ const Projects = () => {
 
     {
       id: 4,
-      image: proj3,
-      title: "Task Management App",
+      image: proj4,
+      title: "Smart EMI Planner",
       description:
-        "A task manager app where users can create, update, and delete tasks with a beautiful and responsive interface.",
-      tech: ['React', 'MongoDB', 'Express'],
-      github: "#",
-      live: "#"
+        "A smart EMI planner app that helps users calculate and manage their loan emis efficiently.",
+      tech: ['React', 'Vite', 'CSS'],
+      github: "https://github.com/simranpanwar123/EMI-Planner",
+      live: "https://emi-planner-mauve.vercel.app/"
     }
   ]
 

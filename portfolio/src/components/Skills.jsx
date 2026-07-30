@@ -1,80 +1,104 @@
 import React from 'react'
 import {
-  Cpu,
-  Layers,
-  Layout,
-  Terminal,
-  Database,
-  Globe,
+  FileCode2,
+  Palette,
+  Braces,
+  Atom,
+  Wind,
+  Boxes,
+  CloudCog,
   Server,
-  Code2
-} from 'lucide-react'
+  Database,
+  Route,
+} from "lucide-react";
+import {
+  GitBranch,
+  GitCommitHorizontal,
+} from "lucide-react";
 
 const Experience = () => {
 
   const skills = [
-    {
-      id: 1,
-      name: "HTML & CSS",
-      width: "95%",
-      icon: Layout
-    },
-    {
-      id: 2,
-      name: "JavaScript",
-      width: "85%",
-      icon: Terminal
-    },
-    {
-      id: 3,
-      name: "React JS",
-      width: "78%",
-      icon: Cpu
-    },
-    {
-      id: 4,
-      name: "Bootstrap",
-      width: "92%",
-      icon: Globe
-    },
-    {
-      id: 5,
-      name: "Python",
-      width: "90%",
-      icon: Code2
-    },
-    {
-      id: 6,
-      name: "MongoDB",
-      width: "82%",
-      icon: Database
-    },
-    {
-      id: 7,
-      name: "PHP",
-      width: "75%",
-      icon: Server
-      
-    },
-    {
-      id: 8,
-      name: "Django",
-      width: "78%",
-      icon: Server
-    },
-    {
-      id: 9,
-      name: "SQL",
-      width: "84%",
-      icon: Database
-    },
-    {
-      id: 10,
-      name: "Git & GitHub",
-      width: "88%",
-      icon: Layers
-    }
-  ]
+  {
+    id: 1,
+    name: "HTML5",
+    width: "90%",
+    icon: FileCode2,
+  },
+  {
+    id: 2,
+    name: "CSS3",
+    width: "90%",
+    icon: Palette,
+  },
+  {
+    id: 3,
+    name: "JavaScript (ES6+)",
+    width: "85%",
+    icon: Braces,
+  },
+  {
+    id: 4,
+    name: "React.js",
+    width: "82%",
+    icon: Atom,
+  },
+  {
+    id: 5,
+    name: "Tailwind CSS",
+    width: "90%",
+    icon: Wind,
+  },
+  {
+    id: 6,
+    name: "Bootstrap",
+    width: "85%",
+    icon: Boxes,
+  },
+  {
+    id: 7,
+    name: "REST API Integration",
+    width: "80%",
+    icon: CloudCog,
+  },
+  {
+    id: 8,
+    name: "React Router",
+    width: "80%",
+    icon: Route,
+  },
+  {
+    id: 9,
+    name: "Git",
+    width: "80%",
+    icon: GitBranch,
+  },
+  {
+    id: 10,
+    name: "GitHub",
+    width: "80%",
+    icon: GitBranch,
+
+  },
+  {
+    id: 11,
+    name: "Node.js (Basic)",
+    width: "65%",
+    icon: Server,
+  },
+  {
+    id: 12,
+    name: "Express.js (Basic)",
+    width: "60%",
+    icon: Server,
+  },
+  {
+    id: 13,
+    name: "MongoDB (Basic)",
+    width: "60%",
+    icon: Database,
+  },
+];
 
   return (
     <section

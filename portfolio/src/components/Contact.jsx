@@ -1,40 +1,48 @@
-import React from 'react'
-import { FaEnvelope, FaPhone, FaLinkedin, FaMapMarkedAlt} from 'react-icons/fa'
+import React, { useState } from 'react'
+import { FaEnvelope, FaPhone, FaLinkedin, FaMapMarkedAlt } from 'react-icons/fa'
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: ""
+    });
 
-    // const contactInfo = [
-    //     {
-    //         id: 1,
-    //         icon: FaEnvelope,
-    //         title: "Email",
-    //         value: "hello@example.com",
-    //         link: "mailto:hello@example.com"
-    //     },
 
-    //     {
-    //         id: 2,
-    //         icon: FaPhone,
-    //         title: "Phone",
-    //         value: "+123 456-7890",
-    //         link: "tel:+11234567890"
-    //     },
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
 
-    //     {
-    //         id: 3,
-    //         icon: FaLinkedin,
-    //         title: "LinkedIn",
-    //         value: "linkedin.com/in/username",
-    //         link: "#"
-    //     },
-    //     {
-    //         id: 4,
-    //         icon: FaMapMarkedAlt,
-    //         title: "Location",
-    //         value: "Delhi, India",
-    //         link: "#"
-    //     }
-    // ]
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+
+        emailjs.send(
+            "service_7pe1uor",
+            "template_ona182f",
+            formData,
+           "OF4ueiIyABEoGB5qW"
+        )
+            .then(() => {
+                alert("Message sent successfully 🚀");
+
+                setFormData({
+                    name: "",
+                    email: "",
+                    message: ""
+                });
+
+            })
+            .catch(() => {
+                alert("Something went wrong");
+            });
+
+    };
+
 
     return (
         <section className='py-20 bg-gray-900' id='contact'>
@@ -53,71 +61,32 @@ const Contact = () => {
                 </div>
 
                 {/* Grid */}
-                
 
-                    {/* Left Side */}
-                    <div>
 
-                        <p className='text-white text-center  mb-8 leading-relaxed'>
-                            I'm always open to discussing new projects,
-                            creative ideas, or opportunities to be part
-                            of your vision. Feel free to reach out through
-                            any of the contact methods below!
-                        </p>
-{/* 
-                        // <div className='space-y-6'>
+                {/* Left Side */}
+                <div>
 
-                        //     {contactInfo.map((contact) => {
+                    <p className='text-white text-center  mb-8 leading-relaxed'>
+                        I'm always open to discussing new projects,
+                        creative ideas, or opportunities to be part
+                        of your vision. Feel free to reach out through
+                        any of the contact methods below!
+                    </p>
 
-                        //         const Icon = contact.icon
-
-                        //         return (
-                        //             <a
-                        //                 href={contact.link}
-                        //                 key={contact.id}
-                        //                 target='_blank'
-                        //                 rel='noopener noreferrer'
-                        //                 className='flex items-center gap-4 group'
-                        //             >
-
-                        //                 <div className='w-12 h-12 rounded-full bg-cyan-400 flex items-center justify-center group-hover:bg-cyan-500 transition-colors duration-300'>
-
-                        //                     <Icon
-                        //                         className='text-black'
-                        //                         size={18}
-                        //                     />
-
-                        //                 </div>
-
-                        //                 <div>
-
-                        //                     <h4 className='text-white font-medium text-sm'>
-                        //                         {contact.title}
-                        //                     </h4>
-
-                        //                     <p className='text-gray-400 text-sm'>
-                        //                         {contact.value}
-                        //                     </p>
-
-                        //                 </div>
-
-                        //             </a>
-                        //         )
-                        //     })}
-
-                        // </div> */}
-
-                    
-
-                    {/* Right Side */}
                     <div className='bg-gray-800 p-8 rounded-2xl shadow-lg  w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] mx-auto' >
 
-                        <form className='space-y-6'>
+                        <form
+                            onSubmit={handleSubmit}
+                            className='space-y-6'
+                        >
 
                             <div>
                                 <input
                                     type='text'
                                     placeholder='Your Name'
+                                    name="name"
+                                    value={formData.name}
+                                    onChange={handleChange}
                                     className='w-full  p-4 rounded-lg bg-gray-700 text-white outline-none focus:ring-2 focus:ring-cyan-400'
                                 />
                             </div>
@@ -126,6 +95,9 @@ const Contact = () => {
                                 <input
                                     type='email'
                                     placeholder='Your Email'
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
                                     className='w-full p-4 rounded-lg bg-gray-700 text-white outline-none focus:ring-2 focus:ring-cyan-400'
                                 />
                             </div>
@@ -134,27 +106,32 @@ const Contact = () => {
                                 <textarea
                                     rows='5'
                                     placeholder='Your Message'
-                                    className='w-full p-4 rounded-lg bg-gray-700 text-white outline-none focus:ring-2 focus:ring-cyan-400'
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={handleChange}
+                            
+                                className='w-full p-4 rounded-lg bg-gray-700 text-white outline-none focus:ring-2 focus:ring-cyan-400'
                                 ></textarea>
-                            </div>
-
-                            <button
-                                type='submit'
-                                className='w-full bg-cyan-400 text-black py-3 rounded-lg font-semibold hover:bg-cyan-500 transition-colors duration-300'
-                            >
-                                Send Message
-                            </button>
-
-                        </form>
-
                     </div>
 
-                </div>
+                    <button
+                        type='submit'
+                        className='w-full bg-cyan-400 text-black py-3 rounded-lg font-semibold hover:bg-cyan-500 transition-colors duration-300'
+                    >
+                        Send Message
+                    </button>
+
+                </form>
 
             </div>
 
-        </section>
+        </div>
+
+            </div >
+
+        </section >
     )
 }
 
 export default Contact
+

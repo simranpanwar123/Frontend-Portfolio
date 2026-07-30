@@ -56,7 +56,7 @@ const Header = () => {
       isMenuOpen ? 'translate-x-0' : 'translate-x-full'} p-8 flex flex-col`}>
 
         <button className='self-end text-white mb-10'
-        onclick={() => setIsMenuOpen(false)}>
+        onClick={() => setIsMenuOpen(false)}>
          <X size={32}/>
         </button>
         <ul className='flex flex-col gap-8'>
