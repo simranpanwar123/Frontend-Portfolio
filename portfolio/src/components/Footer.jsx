@@ -14,7 +14,7 @@ const Footer = () => {
           </div>
 
           <h3 className='text-gray-300 mt-1'>
-            Full Stack Developer | Portfolio Website
+            Frontend Developer | Portfolio Website
           </h3>
         </div>
 
