@@ -130,16 +130,7 @@ While building this project, I strengthened my understanding of:
 * EmailJS integration
 * Git and GitHub workflow
 * Frontend deployment with Vercel
-* Creating reusable UI components
-
-🔮 Future Improvements
-
-* Add more interactive animations
-* Improve accessibility
-* Add additional projects and case studies
-* Improve SEO and performance
-* Add more advanced UI interactions
-* Continue refining the portfolio based on user feedback
+* Creating reusable UI 
 
 👩‍💻 About Me
 
