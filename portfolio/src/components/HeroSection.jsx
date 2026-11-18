@@ -37,7 +37,7 @@ const HeroSection = () => {
                
 
               </h1>
-              <h2 className='text-white font-bold text-2xl pt-7 '>Frontend Developer</h2>
+              <h2 className='text-white font-bold text-2xl pt-7 '>Web Developer</h2>
 
             </div>
 
@@ -46,7 +46,8 @@ const HeroSection = () => {
 
               I'm dedicated to creating
               modern, responsive, and user-friendly web applications.
-              Building responsive, modern and user-friendly web applications using React, JavaScript and Tailwind CSS.
+              Passionate about creating meaningful digital experiences using
+            modern web technologies.
 
             </p>
 

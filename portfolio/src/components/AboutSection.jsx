@@ -21,21 +21,21 @@ const AboutSection = () => {
           </h2>
 
           <h4 className='text-cyan-400 font-bold text-3xl md:text-4xl lg:text-5xl pt-6 mb-6 text-center md:text-left'>
-            Hi, I'm Simran Panwar 
+            Hi, I'm Simran Panwar,
           </h4>
 
           {/* About Text */}
           <p className='text-gray-300 text-base lg:text-lg  mb-10 leading-relaxed pt-5 text-justify text-center md:text-left'>
 
-            I'm a passionate{' '}
+             I'm a passionate{' '}
             <span className='text-cyan-400 font-bold'>
-              Frontend Developer
+              Web Developer
             </span>{' '}
-            dedicated to building modern, responsive, and user-friendly
-            web applications. I enjoy turning creative ideas into real-world
-            digital experiences using technologies like React, JavaScript, HTML, CSS and Tailwind CSS.
+             with a strong interest in building modern, responsive, and user-friendly web applications.
 
             <br /><br />
+            I have completed my Diploma in Web Development and gained hands-on experience in developing web projects using technologies such as HTML, CSS, JavaScript, React.js, Tailwind CSS, Node.js, Express.js, and MongoDB.
+            <br/><br/>
 
             My focus is on creating clean UI designs, smooth user experiences,
             and high-performance applications that solve real problems.
@@ -44,8 +44,7 @@ const AboutSection = () => {
 
             <br /><br />
 
-            I’m always excited to collaborate, explore new opportunities,
-            and create impactful web solutions that make a difference.
+            As a dedicated and enthusiastic developer, I'm always eager to learn new technologies, improve my skills, and take on new challenges. I'm currently looking for an opportunity where I can contribute my abilities, gain professional experience, and grow as a Web Developer.
 
           </p>
 

@@ -1,180 +1,132 @@
-import React from 'react'
+
+import React from "react";
 import {
-  FileCode2,
-  Palette,
-  Braces,
-  Atom,
-  Wind,
-  Boxes,
-  CloudCog,
+  Code2,
+  Monitor,
   Server,
   Database,
-  Route,
-} from "lucide-react";
-import {
-  GitBranch,
-  GitCommitHorizontal,
+  Wrench,
+  Layers,
 } from "lucide-react";
 
-const Experience = () => {
-
-  const skills = [
+const skillCategories = [
   {
-    id: 1,
-    name: "HTML5",
-    width: "90%",
-    icon: FileCode2,
+    title: "Frontend Development",
+    icon: Monitor,
+    description: "Building responsive and interactive user interfaces.",
+    skills: ["HTML5", "CSS3", "JavaScript", "React.js", "Tailwind CSS", "Bootstrap"],
+    color: "from-purple-500 to-pink-500",
   },
   {
-    id: 2,
-    name: "CSS3",
-    width: "90%",
-    icon: Palette,
-  },
-  {
-    id: 3,
-    name: "JavaScript (ES6+)",
-    width: "85%",
-    icon: Braces,
-  },
-  {
-    id: 4,
-    name: "React.js",
-    width: "82%",
-    icon: Atom,
-  },
-  {
-    id: 5,
-    name: "Tailwind CSS",
-    width: "90%",
-    icon: Wind,
-  },
-  {
-    id: 6,
-    name: "Bootstrap",
-    width: "85%",
-    icon: Boxes,
-  },
-  {
-    id: 7,
-    name: "REST API Integration",
-    width: "80%",
-    icon: CloudCog,
-  },
-  {
-    id: 8,
-    name: "React Router",
-    width: "80%",
-    icon: Route,
-  },
-  {
-    id: 9,
-    name: "Git",
-    width: "80%",
-    icon: GitBranch,
-  },
-  {
-    id: 10,
-    name: "GitHub",
-    width: "80%",
-    icon: GitBranch,
-
-  },
-  {
-    id: 11,
-    name: "Node.js (Basic)",
-    width: "65%",
+    title: "Backend Development",
     icon: Server,
+    description: "Developing server-side applications and REST APIs.",
+    skills: ["Node.js", "Express.js", "Python", "Django", "REST API"],
+    color: "from-blue-500 to-cyan-500",
   },
   {
-    id: 12,
-    name: "Express.js (Basic)",
-    width: "60%",
-    icon: Server,
-  },
-  {
-    id: 13,
-    name: "MongoDB (Basic)",
-    width: "60%",
+    title: "Database",
     icon: Database,
+    description: "Managing and working with application data.",
+    skills: ["MongoDB", "MySQL"],
+    color: "from-green-500 to-emerald-500",
+  },
+  {
+    title: "Tools & Technologies",
+    icon: Wrench,
+    description: "Tools used for development and collaboration.",
+    skills: ["Git", "GitHub", "VS Code", "Vercel"],
+    color: "from-orange-500 to-yellow-500",
   },
 ];
 
+const Skills = () => {
   return (
     <section
-      className='text-white py-20 relative overflow-hidden'
-      id='skills'
+      id="skills"
+      className="relative overflow-hidden bg-[#080d20] px-6 py-24 text-white"
     >
+      {/* Background Effects */}
+      <div className="absolute left-0 top-20 h-72 w-72 rounded-full bg-purple-600/10 blur-[120px]" />
+      <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-blue-600/10 blur-[120px]" />
 
-      <div className='max-w-7xl mx-auto px-6 lg:px-16 relative z-10'>
+      <div className="relative z-10 mx-auto max-w-7xl">
 
-        <div data-aos='fade-right'>
+        {/* Section Heading */}
+        <div className="mb-16 text-center">
+          <span className="mb-4 inline-block rounded-full border border-purple-400/30 bg-purple-500/10 px-5 py-2 text-sm font-medium text-purple-300">
+            What I Work With
+          </span>
 
-          <h2 className='text-4xl md:text-5xl font-extrabold mb-14 text-center'>
-            Technical <span className='text-cyan-400'>Skills</span>
+          <h2 className="text-4xl font-bold sm:text-5xl">
+            My{" "}
+            <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+              Skills
+            </span>
           </h2>
 
-          {/* Grid 2 Columns */}
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
+          <p className="mx-auto mt-5 max-w-2xl text-gray-400">
+            A collection of technologies and tools I use to build
+            modern, responsive, and functional web applications.
+          </p>
+        </div>
 
-            {skills.map((skill) => {
+        {/* Skill Categories */}
+        <div className="grid gap-7 sm:grid-cols-2">
 
-              const SkillIcon = skill.icon
+          {skillCategories.map((category, index) => {
+            const Icon = category.icon;
 
-              return (
-                <div
-                  key={skill.id}
-                  className='group bg-[#111827]/40 border border-[#1f2937] rounded-2xl p-6 hover:border-cyan-400 transition-all duration-300 shadow-lg'
-                >
-
-                  <div className='flex items-center justify-between mb-4'>
-
-                    <div className='flex items-center gap-4'>
-
-                      <div className='p-3 bg-[#111a3e] rounded-xl group-hover:bg-cyan-400 transition-all duration-300'>
-
-                        <SkillIcon
-                          className='text-cyan-400 group-hover:text-white transition-colors duration-300'
-                          size={24}
-                        />
-
-                      </div>
-
-                      <span className='text-lg font-semibold tracking-wide'>
-                        {skill.name}
-                      </span>
-
-                    </div>
-
-                    <span className='text-cyan-400 font-bold text-sm'>
-                      {skill.width}
-                    </span>
-
+            return (
+              <div
+                key={index}
+                className="group rounded-2xl border border-white/10 bg-[#111a35]/70 p-7 backdrop-blur-lg transition duration-300 hover:-translate-y-2 hover:border-purple-400/40 hover:shadow-xl hover:shadow-purple-900/20"
+              >
+                {/* Icon & Title */}
+                <div className="mb-6 flex items-center gap-4">
+                  <div
+                    className={`rounded-xl bg-gradient-to-br ${category.color} p-3 text-white shadow-lg`}
+                  >
+                    <Icon size={25} />
                   </div>
 
-                  {/* Progress Bar */}
-                  <div className='w-full h-3 bg-[#1e293b] rounded-full overflow-hidden'>
-
-                    <div
-                      className='h-full rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 shadow-[0_0_15px_#06b6d4] transition-all duration-700'
-                      style={{ width: skill.width }}
-                    >
-                    </div>
-
+                  <div>
+                    <h3 className="text-xl font-bold">
+                      {category.title}
+                    </h3>
+                    <p className="mt-1 text-sm text-gray-500">
+                      {category.description}
+                    </p>
                   </div>
-
                 </div>
-              )
-            })}
 
+                {/* Skills */}
+                <div className="flex flex-wrap gap-3">
+                  {category.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-300 transition duration-300 hover:border-purple-400/50 hover:bg-purple-500/10 hover:text-purple-300"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Bottom Message */}
+        <div className="mt-14 text-center">
+          <div className="inline-flex items-center gap-2 rounded-full border border-blue-400/20 bg-blue-500/5 px-5 py-3 text-sm text-blue-300">
+            <Layers size={18} />
+            Always learning, always improving.
           </div>
-
         </div>
 
       </div>
-
     </section>
-  )
-}
+  );
+};
 
-export default Experience
+export default Skills;
